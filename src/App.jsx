@@ -1,15 +1,16 @@
 import Footer from './components/Footer';
-import Navbar from './components/Navbar';import Card from "./components/Card"
+import Navbar from './components/Navbar';
+import Card from "./components/Card";
 
 function App() {
 
   return (
     <>
-    <Navbar id="navbar"></Navbar>
+      <Navbar id="navbar"></Navbar>
       <Card
-      nombre={"Nombre de prueba"}
-      descripcion={"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"}
-      img={"prueba.jpg"}
+        nombre={"Nombre de prueba"}
+        descripcion={"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"}
+        img={"prueba.jpg"}
       />
       <Footer id="footer"></Footer>
     </>
