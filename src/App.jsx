@@ -1,11 +1,16 @@
 import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';import Card from "./components/Card"
+
 function App() {
 
   return (
     <>
     <Navbar id="navbar"></Navbar>
-      <h1 className='text-center'> Hola </h1>
+      <Card
+      nombre={"Nombre de prueba"}
+      descripcion={"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"}
+      img={"prueba.jpg"}
+      />
       <Footer id="footer"></Footer>
     </>
   )
