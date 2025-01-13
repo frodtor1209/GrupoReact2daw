@@ -1,9 +1,14 @@
+import Card from "./components/Card"
 
 function App() {
 
   return (
     <>
-      <h1 className='text-center'> Hola </h1>
+      <Card
+      nombre={"Nombre de prueba"}
+      descripcion={"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"}
+      img={"prueba.jpg"}
+      />
     </>
   )
 }
