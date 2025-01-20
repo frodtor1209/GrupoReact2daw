@@ -5,6 +5,8 @@ import Card from './components/Card';
 import David from './pages/David';
 import Francisco from './pages/Francisco';
 import Manuel from './pages/Manuel';
+import DavidRoute from './pages/DavidRoute';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           <Route path="/david" element={<David />} />
           <Route path="/francisco" element={<Francisco />} />
           <Route path="/manuel" element={<Manuel />} />
+          <Route path="/davidRoute" element={<DavidRoute />} />
         </Routes>
         <Footer />
       </>
