@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className="bg-gray-800 p-4">
       <div className="flex items-center justify-between">
-        <a href="#" className="text-white text-2xl font-semibold">Proyecto React 2DAW</a>
+        <Link to="/" className="text-white text-2xl font-semibold">
+          Proyecto React 2DAW
+        </Link>
         <div className="space-x-4">
-          <a href="#navbar" className="text-white hover:text-yellow-400">David</a>
-          <a href="#tarjeta" className="text-white hover:text-yellow-400">Francisco</a>
-          <a href="#footer" className="text-white hover:text-yellow-400">Manuel</a>
+          <Link to="/david" className="text-white hover:text-yellow-400">David</Link>
+          <Link to="/francisco" className="text-white hover:text-yellow-400">Francisco</Link>
+          <Link to="/manuel" className="text-white hover:text-yellow-400">Manuel</Link>
         </div>
       </div>
     </nav>
