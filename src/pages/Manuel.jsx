@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../components/Card';
 import Componentes from '../components/Componentes';
+import Tabla from '../components/Tabla';
 
 const Manuel = () => {
   return (
@@ -12,7 +13,10 @@ const Manuel = () => {
     nombre="Prueba Manuel" 
     descripcion="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum" 
     img="prueba.jpg" />
+        <Tabla/>
   </div>
+
+
   );
 };
 
