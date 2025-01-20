@@ -26,7 +26,7 @@ const Contador = () => {
                 </button>
                 <button
                     onClick={reiniciar}
-                    className="px-4 py-2 bg-orange-500 text-white rounded-md shadow hover:bg-green-600 transition"
+                    className="px-4 py-2 bg-orange-500 text-white rounded-md shadow hover:bg-orange-600 transition"
                 >
                     Reiniciar
                 </button>
