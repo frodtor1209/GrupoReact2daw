@@ -13,10 +13,10 @@ export default function Formulario() {
         type="text"
         value={value}
         onChange={handleChange}
-        placeholder="Type something..."
+        placeholder="Escribe algo"
         className="border border-gray-300 rounded-lg p-2 w-full"
       />
-      <p className="mt-4 text-gray-600">You typed: {value}</p>
+      <p className="mt-4 text-gray-600">Has escrito: {value}</p>
     </div>
   );
 }
