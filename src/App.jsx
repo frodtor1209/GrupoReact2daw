@@ -6,6 +6,8 @@ import David from './pages/David';
 import Francisco from './pages/Francisco';
 import Manuel from './pages/Manuel';
 import DavidRoute from './pages/DavidRoute';
+import FormularioDavid from './pages/FormularioDavid';
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
           <Route path="/francisco" element={<Francisco />} />
           <Route path="/manuel" element={<Manuel />} />
           <Route path="/davidRoute" element={<DavidRoute />} />
+          <Route path="/formularioDavid" element={<FormularioDavid />} />
         </Routes>
         <Footer />
       </>
