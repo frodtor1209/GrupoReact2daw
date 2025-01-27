@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Card from '../components/Card';
 import Componentes from '../components/Componentes';
+import EventoArrastrarYSoltar from '../components/EventoArrastrarYSoltar';
 
 const David = () => {
   const [image, setImage] = useState("prueba.jpg");
@@ -26,6 +27,14 @@ const David = () => {
         className="mt-4 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none">
         Cambiar Imagen
       </button>
+      <br></br>
+      <br></br> 
+      <Componentes 
+      titulo="Componente arrastrar y soltar (Eventos)" 
+      ChildComponent={EventoArrastrarYSoltar}
+      nombre="" 
+      descripcion="" 
+      img=""  />
     </div>
   );
 };
