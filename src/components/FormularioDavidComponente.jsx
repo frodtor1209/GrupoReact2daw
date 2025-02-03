@@ -13,6 +13,7 @@ function FormularioDavidComponente() {
   const [sexoFijo, setSexoFijo] = useState(null);
 
   const onSubmit = (data) => {
+    alert("Comprueba la consola");
     console.log(data);
   };
 
@@ -25,7 +26,7 @@ function FormularioDavidComponente() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen">
       <form
         className="w-full max-w-md bg-white p-6 rounded-lg shadow-md"
         onSubmit={handleSubmit(onSubmit)}
@@ -113,13 +114,12 @@ function FormularioDavidComponente() {
           <input
             id="email"
             type="email"
-
+            {...register("email", { required: true })}
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
-          {errors.email?.type === "pattern" && (
-            <p className="text-red-500 text-sm mt-1">
-              El formato del email es incorrecto
-            </p>
+
+          {errors.email && (
+            <p className="text-red-500 text-sm mt-1">El campo email es requerido</p>
           )}
         </div>
 
@@ -135,8 +135,8 @@ function FormularioDavidComponente() {
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none 
             [&::-webkit-inner-spin-button]:appearance-none 
             [&::-webkit-outer-spin-button]:appearance-none 
-            [-moz-appearance:textfield]"/> 
-            {/* Para quitar los botones de subir y bajar de los números le he pedido a chatgpt las clases en tailwind y me ha dado eso */}
+            [-moz-appearance:textfield]"/>
+          {/* Para quitar los botones de subir y bajar de los números le he pedido a chatgpt las clases en tailwind y me ha dado eso */}
           {errors.edad && (
             <p className="text-red-500 text-sm mt-1">
               La edad debe estar entre 18 y 65
@@ -148,8 +148,7 @@ function FormularioDavidComponente() {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
-          >
+            className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
             Enviar
           </button>
         </div>
