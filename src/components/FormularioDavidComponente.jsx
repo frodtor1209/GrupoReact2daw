@@ -10,17 +10,17 @@ function FormularioDavidComponente() {
     handleSubmit,
   } = useForm();
 
-  const [sexoFijo, setSexoFijo] = useState(null); // Estado para bloquear el sexo seleccionado.
+  const [sexoFijo, setSexoFijo] = useState(null);
 
   const onSubmit = (data) => {
-    console.log(data); // Aquí verás todos los datos, incluido el sexo.
+    console.log(data);
   };
 
   const bloquearSexo = (e) => {
     if (!sexoFijo) {
       const valorSeleccionado = e.target.value;
-      setSexoFijo(valorSeleccionado); // Establece el sexo fijado.
-      setValue("sexo", valorSeleccionado); // Actualiza el formulario con el valor fijado.
+      setSexoFijo(valorSeleccionado);
+      setValue("sexo", valorSeleccionado);
     }
   };
 
@@ -42,7 +42,7 @@ function FormularioDavidComponente() {
           <input
             id="nombre"
             type="text"
-            {...register("nombre", { required: true, maxLength: 10 })}
+            {...register("nombre", { required: true, maxLength: 20 })}
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
           {errors.nombre?.type === "required" && (
@@ -50,7 +50,7 @@ function FormularioDavidComponente() {
           )}
           {errors.nombre?.type === "maxLength" && (
             <p className="text-red-500 text-sm mt-1">
-              El campo nombre debe tener menos de 10 caracteres
+              El campo nombre debe tener menos de 20 caracteres
             </p>
           )}
         </div>
@@ -66,7 +66,7 @@ function FormularioDavidComponente() {
                 type="radio"
                 value="masculino"
                 {...register("sexo", { required: true })}
-                checked={sexoFijo === "masculino"} // Mantiene el valor si es fijo
+                checked={sexoFijo === "masculino"}
                 onChange={bloquearSexo}
               />
               Masculino
@@ -76,7 +76,7 @@ function FormularioDavidComponente() {
                 type="radio"
                 value="femenino"
                 {...register("sexo", { required: true })}
-                checked={sexoFijo === "femenino"} // Mantiene el valor si es fijo
+                checked={sexoFijo === "femenino"}
                 onChange={bloquearSexo}
               />
               Femenino
@@ -112,10 +112,8 @@ function FormularioDavidComponente() {
           </label>
           <input
             id="email"
-            type="text"
-            {...register("email", {
-              pattern: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
-            })}
+            type="email"
+
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
           {errors.email?.type === "pattern" && (
@@ -132,10 +130,13 @@ function FormularioDavidComponente() {
           </label>
           <input
             id="edad"
-            type="text"
+            type="number"
             {...register("edad", { validate: edadValidator })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-          />
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none 
+            [&::-webkit-inner-spin-button]:appearance-none 
+            [&::-webkit-outer-spin-button]:appearance-none 
+            [-moz-appearance:textfield]"/> 
+            {/* Para quitar los botones de subir y bajar de los números le he pedido a chatgpt las clases en tailwind y me ha dado eso */}
           {errors.edad && (
             <p className="text-red-500 text-sm mt-1">
               La edad debe estar entre 18 y 65
