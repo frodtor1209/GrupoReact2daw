@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-6">
       <div className="container mx-auto text-center">
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Tu Empresa. Todos los derechos reservados.
+          &copy; {new Date().getFullYear()} Grupo React Manuel Gómez y David Peña.
         </p>
         <div className="flex justify-center mt-4 space-x-4">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">Facebook</a>
