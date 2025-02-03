@@ -7,6 +7,7 @@ import Francisco from './pages/Francisco';
 import Manuel from './pages/Manuel';
 import DavidRoute from './pages/DavidRoute';
 import FormularioDavid from './pages/FormularioDavid';
+import Formulario from './components/Formulario';
 
 
 
