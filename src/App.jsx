@@ -8,6 +8,7 @@ import Manuel from './pages/Manuel';
 import DavidRoute from './pages/DavidRoute';
 import FormularioDavid from './pages/FormularioDavid';
 import Formulario from './components/Formulario';
+import Estudiantes from './pages/Estudiantes';
 
 
 
@@ -22,6 +23,7 @@ function App() {
             descripcion={"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"}
             img={"prueba.jpg"}
           />} />
+          <Route path="/estudiantes" element={<Estudiantes/>} />
           <Route path="/david" element={<David />} />
           <Route path="/francisco" element={<Francisco />} />
           <Route path="/manuel" element={<Manuel />} />
