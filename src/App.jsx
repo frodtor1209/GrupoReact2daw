@@ -9,6 +9,7 @@ import DavidRoute from './pages/DavidRoute';
 import FormularioDavid from './pages/FormularioDavid';
 import Formulario from './components/Formulario';
 import Estudiantes from './pages/Estudiantes';
+import Profesores from './pages/Profesores';
 
 
 
@@ -24,6 +25,7 @@ function App() {
             img={"prueba.jpg"}
           />} />
           <Route path="/estudiantes" element={<Estudiantes/>} />
+          <Route path="/profesores" element={<Profesores/>} />
           <Route path="/david" element={<David />} />
           <Route path="/francisco" element={<Francisco />} />
           <Route path="/manuel" element={<Manuel />} />

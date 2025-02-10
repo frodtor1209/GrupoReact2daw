@@ -8,8 +8,9 @@ app.use(cors());
 
 const conexion = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "",
+    port: 3308,
+    user: "usuario",
+    password: "usuario",
     database: "colegioreact",
 });
 
